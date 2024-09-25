@@ -11,6 +11,7 @@ const AddPostForm = () => {
     const [content, setContent] = useState('')
     const [userId, setUserId] = useState('')
 
+    //this is a selector from usersSlice
     const users = useSelector(selectAllUsers)
 
     const onTitleChanged = e => setTitle(e.target.value)

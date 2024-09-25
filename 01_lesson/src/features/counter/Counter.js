@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
+// functions/actions from counterSlice
 import {
     increment,
     decrement,
@@ -13,10 +14,12 @@ const Counter = () => {
 
     const [incrementAmount, setIncrementAmount] = useState(0);
 
+    //make sure that we dont get NaN
     const addValue = Number(incrementAmount) || 0;
 
     const resetAll = () => {
         setIncrementAmount(0);
+        //global state is reset
         dispatch(reset());
     }
 

@@ -34,8 +34,10 @@ const postsSlice = createSlice({
     name: 'posts',
     initialState,
     reducers: {
+        //reducer function that handle the data we submit
         postAdded: {
             reducer(state, action) {
+                //imma
                 state.push(action.payload)
             },
             prepare(title, content, userId) {
@@ -69,6 +71,7 @@ const postsSlice = createSlice({
 
 export const selectAllPosts = (state) => state.posts;
 
+// our action creators
 export const { postAdded, reactionAdded } = postsSlice.actions
 
 export default postsSlice.reducer
